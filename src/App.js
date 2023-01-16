@@ -4,7 +4,7 @@ import Spinner from './Spinner'
 export default function App() {
 
 	const [formData, setFormData] = useState({
-		prompt: 'Prompt...',
+		prompt: '',
 		size: '512x512'
 	})
 
@@ -33,6 +33,7 @@ export default function App() {
 			console.log('showing spinner')
 			
 			fetch('https://openai-image-generator-flask-backend.onrender.com/generateimage', {
+				mode: 'no-cors',
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -60,7 +61,7 @@ export default function App() {
 					
 					<textarea
 						name="prompt"
-						placeholder='Type a prompt...'
+						placeholder='Prompt...'
 						className='rounded w-full text-gray-500 border-gray-400 font-bold placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-sky-500'
 						onChange={handleChange}
 						value={formData.prompt}
