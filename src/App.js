@@ -4,7 +4,7 @@ import Spinner from './Spinner'
 export default function App() {
 
 	const [formData, setFormData] = useState({
-		prompt: 'bunny in the style of picasso',
+		prompt: 'Prompt...',
 		size: '512x512'
 	})
 
@@ -32,7 +32,7 @@ export default function App() {
 			setShowSpinner(true)
 			console.log('showing spinner')
 			
-			fetch('/generateimage', {
+			fetch('https://openai-image-generator-flask-backend.onrender.com/generateimage', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ export default function App() {
 						value={formData.prompt}
 						></textarea>
 			
-					<div className='flex space-x-2'>
+					<div className='flex space-x-6'>
 
 						<select
 							name="size"

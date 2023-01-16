@@ -8,9 +8,13 @@ html, body {
 }
 
 body {
-	background: linear-gradient(-45deg, #6bb99e, #3f94a8, #3f94a8, #1b394c);
+	/* background: linear-gradient(-45deg, #6bb99e, #3f94a8, #3f94a8, #1b394c);
 	background-size: 400% 400%;
-	animation: gradient 30s ease infinite;
+	animation: gradient 30s ease infinite; */
+
+	background: url(./network-1.jpg);
+	background-size: cover;
+	background-position: center;
 }
 
 @keyframes gradient {
