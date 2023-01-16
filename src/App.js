@@ -53,7 +53,7 @@ export default function App() {
 	return (
 		<div>
 			<main className='container mx-auto mt-12 max-w-2xl bg-white/40 rounded'>
-				<form className="p-6 space-y-4 rounded border-gray-800">
+				<form className="p-6 space-y-4 rounded border-gray-800 backdrop-blur-xl">
 					
 					<textarea
 						name="prompt"
