@@ -30,10 +30,8 @@ export default function App() {
 		try {
 
 			setShowSpinner(true)
-			console.log('showing spinner')
 			
 			fetch('https://openai-image-generator-flask-backend.onrender.com/generateimage', {
-				mode: 'no-cors',
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -42,10 +40,8 @@ export default function App() {
 			})
 			.then(res => res.json())
 			.then(data => {
-				// console.log(data)
 				setData(data)
 				setShowSpinner(false)
-				console.log('hiding spinner')
 			})
 
 		} catch (error) {
